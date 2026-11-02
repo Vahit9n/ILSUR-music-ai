@@ -1,5 +1,8 @@
+import asyncio
+import inspect
 
-import os
+if not hasattr(asyncio, "iscoroutinefunction"):
+    asyncio.iscoroutinefunction = inspect.iscoroutinefunctionimport os
 import logging
 
 from dotenv import load_dotenv
